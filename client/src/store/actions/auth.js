@@ -18,7 +18,7 @@ export const logout =()=>{
         dispatch(setCurrentUser({}));
         dispatch(removeError());
     }
-}
+};
 
 export const authUser =(path,data) =>{
     return async dispatch =>{
@@ -29,8 +29,8 @@ export const authUser =(path,data) =>{
           dispatch(setCurrentUser(user));
           dispatch(removeError());
         }catch(err){
-            const {error}=err.response.data;
-            dispatch(addError(error));
+            const error=err.response.data;
+            dispatch(addError(error.message));
         }
     }
-}
+};

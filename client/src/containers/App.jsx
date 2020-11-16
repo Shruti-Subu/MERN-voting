@@ -1,9 +1,12 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {Provider} from 'react-redux';
-import api from '../services/api';
+//import api from '../services/api';
 import {store} from '../store';
 import { addError,  setCurrentUser ,setToken} from '../store/actions';
 import decode from 'jwt-decode';
+
+import Auth from '../components/Auth';
+import ErrorMessage from '../components/ErrorMessage';
 
 if(localStorage.jwtToken){
   setToken(localStorage.jwtToken);
@@ -17,7 +20,8 @@ if(localStorage.jwtToken){
 }
 
 const App=()=><Provider store={store}>
-    <div>aPP works</div>
+    <Auth authType={'login'} />
+    <ErrorMessage />
 </Provider>
 
 
