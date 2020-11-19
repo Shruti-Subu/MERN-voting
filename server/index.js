@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 app.get('/',(req,res)=> res.send('hello world'));
 app.use('/api/auth',routes.auth);
-app.use('/api/poll',routes.poll);
+app.use('/api/polls',routes.poll);
 
 
 

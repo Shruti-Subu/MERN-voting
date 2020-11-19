@@ -3,7 +3,7 @@ import {SET_, SET_CURRENT_USER} from '../actionTypes';
 const DEFAULT_STATE={
     user:{},
     isAuthenticated:false
-}
+};
 
 export default(state=DEFAULT_STATE,action) =>{
     switch(action.type){

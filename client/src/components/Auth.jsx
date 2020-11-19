@@ -32,9 +32,9 @@ class Auth extends Component{
         const {password}=this.state;
         return <div>
             <form onSubmit={this.handleSubmit}>
-                <label for="username">username</label>
+                <label htmlFor="username">username</label>
                 <input type="text" value={username} name="username" onChange={this.handleChange}></input>
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input type="password" value={password} name="password" onChange={this.handleChange}></input>
                 <button type="submit">       Submit     </button>
             </form>
