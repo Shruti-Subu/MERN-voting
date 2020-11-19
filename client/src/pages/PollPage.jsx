@@ -5,7 +5,7 @@ import ErrorMessage from '../components/ErrorMessage';
 
 const PollPage=({match,getPoll,poll}) =>{
 
-   // const host=window.location.href;
+    const host=window.location.href;
     getPoll(match.params.id);
     return (
         <div>

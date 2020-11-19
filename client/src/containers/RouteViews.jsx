@@ -8,6 +8,7 @@ import TestPage from '../pages/TestPage';
 import PollPage from '../pages/PollPage';
 
 import {getCurrentPoll} from '../store/actions';
+import CreatePoll from '../components/CreatePoll';
 
 
 const RouteViews=({ auth,getCurrentPoll })=>(<main>
@@ -15,7 +16,8 @@ const RouteViews=({ auth,getCurrentPoll })=>(<main>
         <Route exact path="/" render= { props => <HomePage {...props}/>} />
         <Route exact path="/login" render={()=> <AuthPage authType="login" isAuthenticated={auth.isAuthenticated } /> } />
         <Route exact path="/register" render={()=> <AuthPage authType="register" isAuthenticated={auth.isAuthenticated } /> } />
-        <Route  path="polls/:id" render={ props => (<PollPage getPoll={id=>getCurrentPoll(id)} {...props}/> )} />
+        <Route exact  path="polls/:id" render={ props => (<PollPage getPoll={id=>getCurrentPoll(id)} {...props}/> )} />
+        <Route exact path="/poll/new" render={() => < CreatePoll isAuthenticated={auth.isAuthenticated}/>} />
         <Route exact path="/test" render={() => <TestPage />} />
     </Switch>
 </main>);

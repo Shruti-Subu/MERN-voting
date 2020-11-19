@@ -26,7 +26,7 @@ const App=()=>(
     <Router>
         <Fragment>
                <Navbar/>
-                <ErrorMessage />
+               
                 <RouteViews />
         </Fragment>
     </Router>

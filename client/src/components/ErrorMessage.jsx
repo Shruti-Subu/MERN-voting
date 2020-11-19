@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 const ErrorMessage=({error}) =>(
     <Fragment>{
-        error && <div>{error.message}</div>
+        error && <div className="error">{error.message}</div>
         }</Fragment>
 );
 
